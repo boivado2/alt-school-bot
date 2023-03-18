@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(136, 142, 176, 1);
+  border-radius: 16px;
+}
+
+.chat-box {
+  position: absolute;
+  top: 3px;
+  right: -8px;
+  /* border-color: #000; */
+  /* background-color: #000; */
+  /* border-bottom-left-radius: 10px; */
+  background: transparent;
+  border-width: 14px 18px 0 0;
+  transform: rotate(45deg);
+  width: 8px;
+  height: 12px;
+}
+
+input {
+  padding: 1.3rem 2rem;
+  background-color: #cce;
+  color: #000;
+  width: 100%;
+  flex: 0.8;
+}
+
+button {
+  width: 100%;
+  font-size: 1rem;
+  flex: 0.2;
+}
