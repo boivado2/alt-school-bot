@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState,  } from 'react'
-import reactLogo from './assets/react.svg'
+import { useRef, useState,  } from 'react'
 import io from 'socket.io-client'
 import './App.css'
-const socket = io("http://localhost:4000")
+
+console.log(import.meta.env.VITE_DEV_URL)
+const socket = io(import.meta.env.VITE_DEV_URL)
 
 
 
@@ -13,15 +14,6 @@ function App() {
   const [id, setId] = useState(0)
   const chatRef = useRef(null)
 
-
-  // useEffect(() => {
-
-
-  //   socket.on("bot-message", (data) => displayMessage(data, 'bot'))
-
-
-
-  // }, [])
 
   socket.on("bot-message", (data, text) => displayMessage(data, 'bot'))
 
