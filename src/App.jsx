@@ -2,8 +2,7 @@ import { useRef, useState,  } from 'react'
 import io from 'socket.io-client'
 import './App.css'
 
-console.log(import.meta.env.VITE_DEV_URL)
-const socket = io(import.meta.env.VITE_DEV_URL)
+const socket = io(import.meta.env.VITE_URL)
 
 
 
